@@ -440,7 +440,7 @@ impl OptsDiscV5 {
         let mut svc = discv5::Discv5::new(
             enr,
             discv5::enr::CombinedKey::Secp256k1(
-                k256::ecdsa::SigningKey::from_bytes(secret_key.as_ref()).unwrap(),
+                discv5::enr::k256::ecdsa::SigningKey::from_bytes(secret_key.as_ref()).unwrap(),
             ),
             Default::default(),
         )
