@@ -1,3 +1,11 @@
-pub mod eth;
-pub mod config;
-pub mod types;
+mod eth;
+pub use eth::*;
+
+mod config;
+pub use config::*;
+
+mod types;
+pub use types::*;
+
+mod grpc;
+pub use grpc::*;
